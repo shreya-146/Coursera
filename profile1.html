@@ -1,1 +1,160 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peer Grading Project</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #333;
+            color: white;
+        }
+
+        header .name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00bfff;
+            font-weight: bold;
+        }
+
+        .section {
+            padding: 20px;
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .about img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .skills, .projects, .recommendations {
+            margin-top: 20px;
+        }
+
+        .skills ul, .projects ul, .recommendations ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .skills li, .projects li, .recommendations li {
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .skills img, .projects img {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .recommendations button {
+            margin-top: 10px;
+            padding: 5px 10px;
+            background-color: #00bfff;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .recommendations button:hover {
+            background-color: #007acc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="name">Student Name</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#recommendations">Recommendations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="section about">
+        <img src="profile.jpg" alt="Profile Image">
+        <h2>Your Name</h2>
+        <p>Write a brief summary about yourself here.</p>
+    </section>
+
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <ul>
+            <li><img src="skill1.png" alt="Skill 1 Logo">Skill 1</li>
+            <li><img src="skill2.png" alt="Skill 2 Logo">Skill 2</li>
+            <li><img src="skill3.png" alt="Skill 3 Logo">Skill 3</li>
+        </ul>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><img src="project1.png" alt="Project 1">Project 1 Description</li>
+            <li><img src="project2.png" alt="Project 2">Project 2 Description</li>
+            <li><img src="project3.png" alt="Project 3">Project 3 Description</li>
+        </ul>
+    </section>
+
+    <section id="recommendations" class="section recommendations">
+        <h2>Recommendations</h2>
+        <ul>
+            <li>Recommendation 1</li>
+            <li>Recommendation 2</li>
+            <li>Recommendation 3</li>
+        </ul>
+        <button onclick="addRecommendation()">Add Recommendation</button>
+    </section>
+
+    <script>
+        function addRecommendation() {
+            const list = document.querySelector(".recommendations ul");
+            const newRecommendation = document.createElement("li");
+            newRecommendation.textContent = "New Recommendation";
+            list.appendChild(newRecommendation);
+            alert("Recommendation added successfully!");
+        }
+    </script>
+</body>
+</html>
